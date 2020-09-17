@@ -21,7 +21,7 @@ def build_mysql_dataset_mce(dataset_name, schema, schema_version):
     """
     Create the MetadataChangeEvent via dataset_name and schema.
     """
-    actor, fields, sys_time = "urn:li:corpuser:datahub", [], time.time()
+    actor, fields, sys_time = "urn:li:corpuser:datahub", [], int(time.time())
 
     owner = {"owners":[{"owner":actor,"type":"DATAOWNER"}],"lastModified":{"time":0,"actor":actor}}
 
